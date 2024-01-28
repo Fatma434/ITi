@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+    <style>
+        body {
+            margin: 70px 300px;
+            font-family: Andalus;
+            font-size: x-large;
+            font-weight: bold;
+            background-color: lightGrey;
+        }
+        
+        [type=text],
+        [type=button] {
+            font-family: 'Century Gothic';
+            font-size: large;
+        }
+        
+        table {
+            width: 400px;
+        }
+        
+        span {
+            color: red;
+            display: none
+        }
+        
+        .SD {
+            background-color: lightpink;
+        }
+        
+        .OS {
+            background-color: lightyellow;
+        }
+        
+        .EL {
+            background-color: lightskyblue;
+        }
+        
+        .studentTAble {
+            color: blue;
+        }
+        
+        img {
+            width: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <form id="studentForm">
+        <table>
+            <tr>
+                <td colspan="2">
+                    Department:
+                    <input type="radio" name="Department" value="SD" checked="checked"   onclick="changeBackgroundColor('SD')"/>SD
+                    <input type="radio" name="Department" value="OS"  onclick="changeBackgroundColor('OS')"/>OS
+                    <input type="radio" name="Department" value="EL" onclick="changeBackgroundColor('EL')" />EL
+                </td>
+            </tr>
+            <tr>
+                <td>StudentName<input type="text" name="studentName" id="studname" /></td>
+            </tr>
+            <tr>
+                <td>StudentGrade<input type="text" name="studentGrade" id="studgrade" /></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="Add" onclick="addNew()" /></td>
+            </tr>
+            <tr>
+                <td>Search<input type="text" name="searchTxt" /></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    Filter:
+                    <select id="filter">
+                        <option value="all">All</option>
+                        <option value="success">Success</option>
+                        <option value="fail">Fail`</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+
+    </form>
+
+    <table id="studentTAble">
+
+        <tr>
+            <th>Student Name</th>
+            <th>Student Grade</th>
+            <th>
+       
+        </tr>
+        <tbody id="studentList"></tbody>
+
+
+    </table>
+
+
+    <!-- <script src="functions.js"></script> -->
+    <script src="students.js">
+    </script>
+
+</body>
+
+</html>
