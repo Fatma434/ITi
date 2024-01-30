@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Task</title>
+    
+    <link rel="manifest" href="./manifest.webmanifest.json">
+    <link rel="shortcut icon" href="./icon-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul id="mainmenue">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <h4>ITI Admission</h4>
+        <li><a href="#">About us</a></li>
+        
+    </ul>
+    <section id="intro">
+        <h3>ITI Programs <br/> PTP Program <br/> ITP Program</h3>
+        <button>Register</button>
+    </section>
+    <section id="location">
+        <div id="itiInfo">
+            <p>ITI locations over all countries</p>
+        </div>
+        <section id="locationinformation">
+            <div id="location-picture">
+                <img src="map.jpeg" alt="">
+            </div>
+            <div id="location-info">
+                <div class="one">
+                    <div class="locationicon " id="locationMainBranch">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h4>iti-smart villag</h4>
+                    </div>
+                    <div class="locationicon">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h4>iti-assuit</h4>
+                    </div>
+                </div>
+                <div class="one">
+                    <div class="locationicon" id="secondBranch">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h4>iti-cairo</h4>
+                    </div>
+                    <div class="locationicon">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h4>iti-mansoura</h4>
+                    </div>
+                </div>
+                <div class="one">
+                    <div class="locationicon">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h4>iti-alexandria</h4>
+                    </div>
+                    <div class="locationicon">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h4>iti-aswan</h4>
+                    </div>
+                </div>
+                <div class="one">
+                    <div class="locationicon">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h4>iti-ismailia</h4>
+                    </div>
+                    <div class="locationicon">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h4>iti-new capital</h4>
+                    </div>
+                    
+                </div>
+                <div class="radiobtn">
+                    <input type="radio" name="itibranch" value="mainbranch" id="mainButton" onclick="mainBranch()">main branch
+                    <input type="radio" name="itibranch" value="branch" id="branch" onclick="anybranch()"> branch
+                </div>
+            </div>
+        </section>
+        
+    </section>
+    
+
+
+    <script src="SW.js"></script>
+    <script src="script.js"></script>
+ 
+</body>
+</html>

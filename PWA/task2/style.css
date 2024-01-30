@@ -1,0 +1,159 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+#mainmenue{
+    display:flex;
+    justify-content:space-evenly;
+    min-height:10vh;
+    
+    align-items:center;
+}
+#mainmenue>li{
+    list-style:none;
+}
+li>a{
+    text-decoration:none;
+    font-weight:bold;
+    color:rgb(0, 31, 134);
+}
+li>a:hover{
+    color:rgb(131 7 7);
+}
+#intro{
+    background-image:url('images/laptop_top.jpg');
+    background-position:center;
+    background-size:cover;
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+#intro>h3{
+    font:bold 1.2rem tahoma;
+    text-align:center;
+    color:white;
+}
+    #intro > button {
+        margin: 2rem 0;
+        padding: 1.5rem 2rem;
+        font-weight: bold;
+        border-radius: 20px;
+        background-image: linear-gradient(to left, rgb(8, 35, 51), rgb(32 92 202));
+    }
+#intro>button:hover{
+    background-image:linear-gradient(to right , rgb(3, 25, 37) , rgb(32 92 202));
+}
+#location
+{
+    background-color: white;
+}
+#location #itiInfo
+{
+    text-align: center;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#location>div h2
+{
+    text-transform: uppercase;
+}
+#location>div p
+{
+    text-transform: capitalize;
+    font-weight: bold;
+    margin: 6px 0px;
+}
+#locationinformation
+{
+    display: flex;
+    
+}
+#location-info
+{
+   
+   width: 50%;
+}
+#location-picture
+{
+    height: 50vh;
+    width: 50%;
+}
+#location-picture img{
+    height: 100%;
+    width: 100%;
+}
+.locationicon
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: lightgray;
+    width: 40%;
+    padding: 20px 0px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.radiobtn{
+    margin: 1rem 3rem  3rem;
+}
+.one
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+#contcat
+{
+    display: flex;
+    background-color: black;
+    color: whitesmoke;
+    margin-top: 10vh;
+    padding-top: 10vh;
+   
+}
+#contcat .contcattext{
+    width: 70%;
+   text-transform: capitalize;
+    padding: 5px;
+    font-weight: bold;
+    margin-left:1rem ;
+    
+}
+#contcat .contcattext .cont{
+    width: 70%;
+   text-transform: capitalize;
+    padding: 2px;
+    
+    font-weight: bold;
+    color: gray;
+}
+.contcattext div{
+    display: flex;
+    margin: 5px 0px;
+}
+#concat .concaticon
+{
+    width: 30%;
+    padding: 10px;
+    text-transform: capitalize;
+}
+.radiobtn
+{
+    padding-left: 20px;
+}
+#footer
+{
+    background-color: black;
+   
+    color: gray;
+    padding: 10px 10px;
+    height: 10vh;
+}
+.mainbranch
+{
+    background-color: rgb(104, 159, 231);
+}
