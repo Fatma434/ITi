@@ -1,37 +1,36 @@
-let cachName = "cacheV1";
-let Assets = [
-    // "http://127.0.0.1:5500/index.html",
-    // "http://127.0.0.1:5500/style.css"
-    // ,
-    // "http://127.0.0.1:5500/indexeddb.js"
-];
+self.addEventListener('install', e => {
+    e.waitUntil(caches.open(CACHE_NAME).then(async (cache) => {
+      let ok,
+      cats = [
+        'a', 'folder', 'with',
+        'lots', 'of', 'files',
+        'for', 'the', 'same', 'extension'
+      ],
+      c = [
+       
+       'http://127.0.0.1:5500/task1.html',
+       'http://127.0.0.1:5500/style.css',
+       'http://127.0.0.1:5500/indexDB.js'
 
-//~ installition lifecycle we put cache files
-self.addEventListener("install",(installEvent)=>{
-    console.log("installEvent",installEvent);
-    //^ we use this method to prevent sw from going to activate immediately without caches
-    installEvent.waitUntil(
-        caches.open(cachName).then(cache=>{
-            cache.addAll(Assets).then().catch()
-        }).catch(err=>console.log(err))
-    )
-});
 
-self.addEventListener("activate",(activatedEvent)=>{
-    activatedEvent.waitUntil(
-        caches.keys().then(keys=>{
-            return Promise.all(
-                keys.filter((key)=>key!= cachName).map(key=>caches.delete(key))
-            )
-        }).catch(err=>console.log(err))
-    )
-});
-
-self.addEventListener("fetch",(fetchedEvent)=>{
-    console.log(fetchedEvent.request)
-    fetchedEvent.respondWith(
-        caches.match(fetchedEvent.request).then(res=>{
-            return res;
-        })
-    )
-})
+        ];
+  
+      console.log('ServiceWorker: Caching files:', c.length, c);
+      try {
+        ok = await cache.addAll(c);
+      } catch (err) {
+        console.error('sw: cache.addAll');
+        for (let i of c) {
+          try {
+            ok = await cache.add(i);
+          } catch (err) {
+            console.warn('sw: cache.add',i);
+          }
+        }
+      }
+  
+      return ok;
+    }));
+  
+    console.log('ServiceWorker installed');
+  });

@@ -1,4 +1,5 @@
 
+
 if(navigator.serviceWorker){
     alert("is supportwd")
     console.log("hello");
@@ -8,9 +9,6 @@ if(navigator.serviceWorker){
     }else{
         alert("isn;t supportwd")
     }
-    
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('todo-form');
     const input = document.getElementById('todo-input');
