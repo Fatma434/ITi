@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "645953637082",
+    "project_id": "iti-firebase-a5b46",
+    "storage_bucket": "iti-firebase-a5b46.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645953637082:android:1a5ddb5634d10aeee973e3",
+        "android_client_info": {
+          "package_name": "com.example.firebase_login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBryr4ZCqNQ-qEiS7AWXok-TXw_3tqfzPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
